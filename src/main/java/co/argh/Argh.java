@@ -1,5 +1,8 @@
 package co.argh;
 
+import co.argh.item.ItemRegistry;
+import net.minecraft.client.Minecraft;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -16,6 +19,8 @@ public class Argh {
 	@EventHandler
 	public void preinit(FMLPreInitializationEvent event) {
 		
+		ItemRegistry.init_items();
+		MinecraftForge.EVENT_BUS.register(new ItemRegistry());
 	}
 	
 	@EventHandler
