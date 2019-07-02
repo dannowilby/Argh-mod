@@ -1,5 +1,6 @@
 package co.argh;
 
+import co.argh.block.BlockRegistry;
 import co.argh.item.ItemRegistry;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.common.MinecraftForge;
@@ -18,6 +19,9 @@ public class Argh {
 	
 	@EventHandler
 	public void preinit(FMLPreInitializationEvent event) {
+		
+		BlockRegistry.init_blocks();
+		MinecraftForge.EVENT_BUS.register(new BlockRegistry());
 		
 		ItemRegistry.init_items();
 		MinecraftForge.EVENT_BUS.register(new ItemRegistry());
