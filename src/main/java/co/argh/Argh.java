@@ -3,7 +3,7 @@ package co.argh;
 import co.argh.block.BlockRegistry;
 import co.argh.item.ItemRegistry;
 import co.argh.plate.PlateRegistry;
-import co.argh.util.IProxy;
+import co.argh.proxy.IProxy;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -22,7 +22,7 @@ public class Argh {
 	@Mod.Instance
 	public static Argh instance;
 	
-	@SidedProxy(serverSide = "co.argh.ServerProxy", clientSide = "co.argh.ClientProxy")
+	@SidedProxy(serverSide = "co.argh.proxy.ServerProxy", clientSide = "co.argh.proxy.ClientProxy")
 	public static IProxy proxy;
 	
 	@EventHandler

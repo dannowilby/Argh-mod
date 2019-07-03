@@ -1,6 +1,5 @@
-package co.argh;
+package co.argh.proxy;
 
-import co.argh.util.IProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
