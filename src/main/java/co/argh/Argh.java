@@ -2,8 +2,10 @@ package co.argh;
 
 import co.argh.block.BlockRegistry;
 import co.argh.item.ItemRegistry;
+import co.argh.multiblock.Structure;
 import co.argh.plate.PlateRegistry;
 import co.argh.proxy.IProxy;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -42,6 +44,8 @@ public class Argh {
 	
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
+		Structure s = new Structure("toolpress", 0, 0, 0);
+		s.loadStructure(new ResourceLocation(Argh.MODID, "structures/toolpress.json"));
 		
 		proxy.init(event);
 	}

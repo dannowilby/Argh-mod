@@ -1,0 +1,14 @@
+{
+    "name": "tool press",
+    "data": [
+        [
+            ["f"],
+            ["m"],
+            ["f"]
+        ]
+    ],
+    "key": {
+        "m": "argh:toolForge",
+        "f": "minecraft:furnace"
+    }
+}

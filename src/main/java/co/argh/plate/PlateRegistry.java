@@ -52,5 +52,4 @@ public class PlateRegistry {
 		
 		builder.create();
 	}
-	
 }
