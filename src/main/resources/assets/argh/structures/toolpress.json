@@ -1,5 +1,5 @@
 {
-    "name": "tool press",
+    "id": "toolpress",
     "data": [
         [
             ["f"],
@@ -8,7 +8,7 @@
         ]
     ],
     "key": {
-        "m": "argh:toolForge",
+        "m": "argh:test_block",
         "f": "minecraft:furnace"
     }
 }

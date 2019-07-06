@@ -1,5 +1,6 @@
 package co.argh.multiblock;
 
+import co.argh.structure.Structure;
 import net.minecraft.tileentity.TileEntity;
 
 public class TileEntityMultiblock extends TileEntity {
@@ -15,11 +16,19 @@ public class TileEntityMultiblock extends TileEntity {
 	}
 	
 	public boolean checkStructure() {
+		if(this.isMaster()) {
+			return true;
+		}
+		
 		return false;
 	}
 	
 	public boolean isMaster() {
 		return this.isMaster;
+	}
+	
+	public Structure getStructure() {
+		return this.structure;
 	}
 	
 }
