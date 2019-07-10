@@ -15,8 +15,8 @@ public class TileEntityMultiblock extends TileEntity {
 		this.structure = s;
 	}
 	
-	public boolean checkStructure() {
-		if(this.isMaster()) {
+	public boolean isStructure() {
+		if(this.structure.isMultiblock(world, pos)) {
 			return true;
 		}
 		

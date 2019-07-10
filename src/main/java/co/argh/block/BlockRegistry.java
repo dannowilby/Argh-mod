@@ -2,6 +2,7 @@ package co.argh.block;
 
 import java.util.ArrayList;
 
+import co.argh.multiblock.TileEntityToolPress;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
@@ -19,7 +20,7 @@ public class BlockRegistry {
 		
 		blocks = new ArrayList<ArghBlock>();
 		
-		blocks.add(new ArghBlock("test_block", Material.ROCK));
+		blocks.add(new ArghStructureBlock("toolpress", Material.IRON, true, TileEntityToolPress.class));
 	}
 	
 	@SubscribeEvent

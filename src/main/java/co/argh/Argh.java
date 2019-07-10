@@ -5,8 +5,6 @@ import co.argh.item.ItemRegistry;
 import co.argh.multiblock.MultiblockRegistry;
 import co.argh.plate.PlateRegistry;
 import co.argh.proxy.IProxy;
-import co.argh.structure.Structure;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -39,6 +37,8 @@ public class Argh {
 		
 		ItemRegistry.init_items();
 		MinecraftForge.EVENT_BUS.register(new ItemRegistry());
+		
+		MultiblockRegistry.init_tile_entities();
 		
 		proxy.preinit(event);
 	}

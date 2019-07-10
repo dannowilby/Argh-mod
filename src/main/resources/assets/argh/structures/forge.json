@@ -1,0 +1,22 @@
+{
+    "id": "forge",
+    "data": [
+        [
+            ["b", "b", "b"],
+            ["b", "b", "b"],
+            ["b", "b", "b"]
+        ],
+        [
+            ["b", "c", "b"],
+            ["b", "m", "b"],
+            ["b", "c", "b"]
+        ]
+    ],
+    "key": {
+        "m": "argh:toolpress",
+        "f": "minecraft:furnace",
+        "b": "minecraft:clay",
+        "c": "minecraft:cobblestone"
+    }
+}
+
