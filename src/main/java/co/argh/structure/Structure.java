@@ -49,7 +49,7 @@ public class Structure {
 				for(int z = 0; z < this.data[0][0].length; z++) {
 					
 					Block b = this.data[x][y][z];
-					System.out.println(b);
+					
 					if(b instanceof ArghStructureBlock)
 						if(((ArghStructureBlock) b).isMaster())
 							return new BlockPos(x, y, z);
@@ -66,7 +66,7 @@ public class Structure {
 		BlockPos offset = getMasterBlock(input, world, pos);
 		
 		if(offset == null) return false;
-		System.out.println(offset);
+		
 		np = (new BlockPos(pos)).add(-offset.getX(), -offset.getY(), -offset.getZ());
 		
 		for(int x = 0; x < input.length; x++) {
@@ -82,33 +82,14 @@ public class Structure {
 	
 	public boolean isMultiblock(World world, BlockPos pos) {
 		
-		Block[][][] temp1 = this.data.clone();
-		Block[][][] temp2 = this.data.clone();
+		Block[][][] temp = this.data.clone();
 	
-		if(isMultiblock(temp1, world, pos))
-			return true;
-		
-		temp1 = StructureUtils.rotateData(temp1);
-		
-		if(isMultiblock(temp1, world, pos))
-			return true;
-		
-		temp2 = StructureUtils.flipData(temp2);
-		if(isMultiblock(temp2, world, pos))
-			return true;
-		
-		//temp = StructureUtils.rotateData(temp);
-		//if(isMultiblock(temp, world, pos))
-			//return true;
-		
-		/*
-		temp = this.data;
 		if(isMultiblock(temp, world, pos))
 			return true;
+		
 		temp = StructureUtils.rotateData(temp);
 		if(isMultiblock(temp, world, pos))
 			return true;
-		*/
 		
 		return false;
 	}

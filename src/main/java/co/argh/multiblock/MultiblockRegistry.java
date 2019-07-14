@@ -18,7 +18,7 @@ public class MultiblockRegistry {
 		
 		structures = new ArrayList<Structure>();
 		
-		toolpress = StructureUtils.loadStructure(new ResourceLocation(Argh.MODID, "structures/forge.json"));
+		toolpress = StructureUtils.loadStructure(new ResourceLocation(Argh.MODID, "structures/toolpress.json"));
 		
 		structures.add(toolpress);
 		
